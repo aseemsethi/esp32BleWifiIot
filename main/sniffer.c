@@ -89,7 +89,7 @@ IRAM_ATTR void wifi_sniffer_packet_handler(void* buff, wifi_promiscuous_pkt_type
 	wifi_mgmt_hdr *mgmt = (wifi_mgmt_hdr *)pkt->payload;
 
 	fc = ntohs(mgmt->fctl);
-	//ESP_LOGI(TAG, "sniffer callback...");  strlen(macstr) is 17.
+	//strlen(macstr) is 17.
 	snprintf(macStr, sizeof(macStr), "%02x:%02x:%02x:%02x:%02x:%02x",
        	mgmt->sa[0], mgmt->sa[1], mgmt->sa[2], 
        	mgmt->sa[3], mgmt->sa[4], mgmt->sa[5]);
