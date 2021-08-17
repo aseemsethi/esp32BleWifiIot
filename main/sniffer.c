@@ -104,7 +104,6 @@ IRAM_ATTR void wifi_sniffer_packet_handler(void* buff, wifi_promiscuous_pkt_type
 	strcpy(foundMacs[foundIndex], tmp); foundIndex++; 
 	if (foundIndex == 20) foundIndex = 19;
 
-
 	return;
 	if((fc & 0xFF00) == 0x4000){ //only look for probe request packets
 		time(&ts);
